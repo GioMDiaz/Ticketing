@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Event, EventInfo, Session } from 'src/interfaces/event';
-import { formatDate } from './utils/utils';
+import { Event, EventInfo, Session } from 'src/app/interfaces/event';
+import { formatDate } from '../utils/utils';
 
 import { BehaviorSubject, Observable, Subject, throwError } from 'rxjs';
 import { map } from 'rxjs/operators';

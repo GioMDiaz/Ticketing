@@ -1,6 +1,6 @@
 import { EventsListComponent } from './events-list.component';
 import { of } from 'rxjs';
-import { Event } from 'src/interfaces/event';
+import { Event } from 'src/app/interfaces/event';
 import { Router } from '@angular/router';
 
 describe('EventsListComponent', () => {

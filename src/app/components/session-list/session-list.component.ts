@@ -2,7 +2,7 @@ import { formatDate } from '@angular/common';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EventsService } from '../events.service';
-import { Session, EventInfo } from 'src/interfaces/event';
+import { Session, EventInfo } from 'src/app/interfaces/event';
 
 @Component({
   selector: 'app-session-list',
