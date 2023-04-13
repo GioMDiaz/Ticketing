@@ -1,0 +1,87 @@
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+.event-card {
+  background-color: #e8f2ff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  min-width: 250px;
+}
+
+.event-card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+}
+
+.event-card a {
+  text-decoration: none;
+  color: #333;
+}
+
+.event-card h3 {
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
+.event-card h4 {
+  margin: 10px;
+  font-size: 1.2rem;
+}
+
+.event-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.event-date {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.event-date p {
+  margin: 0;
+  padding: 5px;
+}
+
+.event-info {
+  padding: 10px;
+}
+
+.short-description {
+  height: 100px;
+  overflow: hidden;
+}
+
+.description-text {
+  margin: 0;
+}
+
+.card-button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #51b5ff;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}

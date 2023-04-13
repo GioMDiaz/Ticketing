@@ -1,0 +1,32 @@
+<button (click)="clickToBack()" class="back-button">Volver</button>
+<div class="sessionListContainer">
+  <table>
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>Disponibilidad</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let session of dataSessions; let i = index">
+        <td>{{ session.date }}</td>
+        <td>{{ session.availability }}</td>
+        <td>
+          <div class="buttons-container">
+            <button (click)="incrementCount(i)">+</button>
+            <h4>{{ counters[i] }}</h4>
+            <button (click)="decrementCount(i)">-</button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="modal" *ngIf="showModal">
+  <div class="modal-content">
+    <h2 class="modal-title">Lo sentimos</h2>
+    <p class="modal-message">{{ modalMessage }}</p>
+    <button (click)="clickToBack()" class="modal-back-button">Volver</button>
+  </div>
+</div>

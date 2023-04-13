@@ -1,0 +1,15 @@
+<div class="eventDetails">
+  <div class="eventDetailsContainer">
+    <app-session-list (ticketsPurchased)="handleTicketsPurchased($event)"></app-session-list>
+  </div>
+  <div class="inforcart">
+    <div *ngIf="purchasedTicketsList.length > 0" class="cart">
+      <h3 class="cartTitle">Resumen de la compra para: {{ purchasedTicketsList[0].title }}</h3>
+      <div *ngFor="let ticketInfo of purchasedTicketsList" class="cartItem">
+        <p class="cartDate">Fecha: {{ ticketInfo.date }}</p>
+        <p class="cartQuantity">Nº de entradas: {{ ticketInfo.quantity }}</p>
+        <img class="trash-icon" src="assets/img/trash.png" alt="Eliminar entrada"/>
+      </div>
+    </div>
+  </div>
+</div>

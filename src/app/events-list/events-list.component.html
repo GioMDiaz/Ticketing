@@ -1,0 +1,17 @@
+<div class="events-grid">
+  <div class="event-card" *ngFor="let event of events">
+    <a (click)="onClick(event.id)">
+      <h3>{{event?.title}}</h3>
+      <h4>{{event?.subtitle}}</h4>
+      <img src="assets/img/sample-image.jpg" alt="{{event.title}}" />
+      <div class="event-date">
+        <p>{{event?.place}}</p>
+        <p>{{event.startDate}} - {{event.endDate}}</p>
+      </div>
+      <div class="event-info">
+        <p class="short-description description-text">{{event.description}}</p>
+      </div>
+      <button (click)="onClick(event.id)" class="card-button">Comprar</button>
+    </a>
+  </div>
+</div>
